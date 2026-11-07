@@ -1,0 +1,1 @@
+import{t as e}from"./OsomeApp-f-_w3aOU.js";import{a as t}from"./index-C9gFtjrm.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};

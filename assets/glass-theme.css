@@ -1,0 +1,110 @@
+/* ============================================================
+   Colour theme only — Apple iOS 26 Liquid Glass, light.
+   Layout, spacing, type and content are untouched: this file
+   only redefines colour tokens and the surfaces that use them.
+   ============================================================ */
+
+:root {
+  --paper: #ffffff;
+  --cream: #eef4ff;
+  --ink: #0b0b0f;
+  --blue: #007aff;
+  --muted: #6e6e73;
+  --line: rgba(11, 11, 15, 0.1);
+}
+
+html,
+body {
+  background-color: #ffffff;
+  color: var(--ink);
+}
+
+/* Page wall: a soft blue/violet wash so the glass reads */
+body {
+  background-image:
+    radial-gradient(900px 620px at 8% -6%, rgba(0, 122, 255, 0.1), transparent 60%),
+    radial-gradient(820px 560px at 96% 0%, rgba(122, 92, 250, 0.1), transparent 58%),
+    radial-gradient(760px 600px at 60% 100%, rgba(0, 122, 255, 0.06), transparent 62%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Sticky header becomes a floating strip of frosted glass */
+.site-header {
+  background: rgba(255, 255, 255, 0.72) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(190%);
+  box-shadow:
+    inset 0 -1px 0 rgba(255, 255, 255, 0.7),
+    0 1px 2px rgba(11, 11, 15, 0.04),
+    0 14px 34px -26px rgba(11, 11, 15, 0.4);
+}
+
+/* Hero wash: blue into violet, still pale */
+.home-hero {
+  background:
+    radial-gradient(120% 120% at 8% 0%, rgba(0, 122, 255, 0.18), transparent 58%),
+    radial-gradient(110% 110% at 92% 6%, rgba(122, 92, 250, 0.18), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, var(--cream) 100%) !important;
+}
+
+/* Primary actions: Apple blue gel */
+.button-primary {
+  background: linear-gradient(180deg, #3d9dff 0%, var(--blue) 52%, #0063d1 100%) !important;
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 12px 26px -16px rgba(0, 122, 255, 0.9) !important;
+}
+
+.button-primary:hover {
+  filter: brightness(1.05);
+}
+
+.button-outline {
+  border-color: rgba(0, 122, 255, 0.45) !important;
+  color: var(--blue) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Cards, panels and menus: translucent white glass */
+.card,
+.service-card,
+.testimonial,
+.pricing-card,
+.faq-item,
+.mega-menu,
+.desktop-mega-menu,
+[class*="card"] {
+  background-color: rgba(255, 255, 255, 0.66);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 34px -26px rgba(11, 11, 15, 0.35);
+}
+
+/* Section surfaces keep their rhythm, only the tint changes */
+.services-section,
+.section-pad,
+section {
+  background-color: transparent;
+}
+
+footer,
+.site-footer {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(240, 245, 255, 0.9)) !important;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Links and accents */
+a:hover,
+.nav-link:hover,
+.login-link:hover {
+  color: var(--blue);
+}
+
+::selection {
+  background: rgba(0, 122, 255, 0.16);
+}
